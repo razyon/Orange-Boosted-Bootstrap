@@ -5,6 +5,8 @@
 .table {
   --#{$variable-prefix}table-bg: #{$table-bg};
   // Boosted mod: no table-accent-bg
+  --#{$variable-prefix}table-striped-color: #{$table-striped-color};
+  --#{$variable-prefix}table-striped-bg: #{$table-striped-bg};
   --#{$variable-prefix}table-active-color: #{$table-active-color};
   --#{$variable-prefix}table-active-bg: #{$table-active-bg};
   --#{$variable-prefix}table-hover-color: #{$table-hover-color};
@@ -78,7 +80,16 @@
 
 // Boosted mod: no .table-borderless
 
-// Boosted mod: no .table-striped
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+    --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-striped-bg);
+    color: var(--#{$variable-prefix}table-striped-color);
+  }
+}
 
 // Active table
 //
