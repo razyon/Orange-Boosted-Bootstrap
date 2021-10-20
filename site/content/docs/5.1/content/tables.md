@@ -761,10 +761,10 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 
 ### Sizes
 
-Use `.tableh-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content. Add the attribute `tabindex="0"` for the accessibility on all browsers.
+Use `.table-height-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content. Add the attribute `tabindex="0"` for the accessibility on all browsers.
 
 <div class="bd-example">
-  <div class="tableh-sm" tabindex="0">
+  <div class="table-height-sm" tabindex="0">
     <table class="table">
       <thead>
         <tr>
@@ -821,7 +821,7 @@ Use `.tableh-{sm|md|lg}` on the container of the table to limit the height of th
   </div>
 </div>
 <div class="bd-example">
-  <div class="tableh-md" tabindex="0">
+  <div class="table-height-md" tabindex="0">
     <table class="table">
       <thead>
         <tr>
@@ -896,7 +896,7 @@ Use `.tableh-{sm|md|lg}` on the container of the table to limit the height of th
   </div>
 </div>
 <div class="bd-example">
-  <div class="tableh-lg" tabindex="0">
+  <div class="table-height-lg" tabindex="0">
     <table class="table">
       <thead>
         <tr>
@@ -1002,7 +1002,7 @@ Use `.tableh-{sm|md|lg}` on the container of the table to limit the height of th
 </div>
 
 ```html
-<div class="tableh-sm" tabindex="0">
+<div class="table-height-sm" tabindex="0">
   <table class="table">
     <thead>
       ...
@@ -1012,7 +1012,7 @@ Use `.tableh-{sm|md|lg}` on the container of the table to limit the height of th
     </tbody>
   </table>
 </div>
-<div class="tableh-md" tabindex="0">
+<div class="table-height-md" tabindex="0">
   <table class="table">
     <thead>
       ...
@@ -1022,7 +1022,7 @@ Use `.tableh-{sm|md|lg}` on the container of the table to limit the height of th
     </tbody>
   </table>
 </div>
-<div class="tableh-lg" tabindex="0">
+<div class="table-height-lg" tabindex="0">
   <table class="table">
     <thead>
       ...
@@ -1039,7 +1039,7 @@ Use `.tableh-{sm|md|lg}` on the container of the table to limit the height of th
 Add `.table-sticky` to the table element in order to have the first row sticking to the top of the table. The sticky effect has no effect on a non-scrollable table.
 
 <div class="bd-example">
-  <div class="tableh-sm" tabindex="0">
+  <div class="table-height-sm" tabindex="0">
     <table class="table table-sticky">
       <thead>
         <tr>
@@ -1097,7 +1097,7 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 </div>
 
 ```html
-<div class="tableh-sm" tabindex="0">
+<div class="table-height-sm" tabindex="0">
   <table class="table table-sticky">
     <thead>
       <tr>
@@ -1117,7 +1117,7 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 Works also with variants :
 
 <div class="bd-example">
-  <div class="tableh-sm" tabindex="0">
+  <div class="table-height-sm" tabindex="0">
     <table class="table table-sticky table-dark">
       <thead>
         <tr>
@@ -1175,7 +1175,7 @@ Works also with variants :
 </div>
 
 ```html
-<div class="tableh-sm" tabindex="0">
+<div class="table-height-sm" tabindex="0">
   <table class="table table-dark table-sticky">
     <thead>
       <tr>
