@@ -24,6 +24,7 @@ Boosted ships with custom accessible components to suit specific needs:
 
 - [Back to top]({{< docsref "/components/back-to-top" >}})
 - [Orange Navbars]({{< docsref "/components/orange-navbar" >}})
+- [Quantity selector]({{< docsref "/forms/quantity-selector" >}})
 - [Stepped process]({{< docsref "/components/stepped-process" >}})
 
 
