@@ -48,11 +48,6 @@
   > tbody {
     vertical-align: inherit;
   }
-
-  // Highlight border color between thead, tbody and tfoot.
-  > :not(:first-child) {
-    border-top: (2 * $table-border-width) solid $table-group-separator-color;
-  }
 }
 
 
@@ -111,6 +106,37 @@
   }
 }
 
+.table-height-sm {
+  max-height: 200px;
+  overflow: auto;
+}
+
+.table-height-md {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.table-height-lg {
+  max-height: 600px;
+  overflow: auto;
+}
+
+.table-sticky {
+  > thead {
+    > tr {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      border-width: 0;
+
+      > th { // stylelint-disable-line
+        $border-bottom-thead: calc(100% - ($table-border-width * 2)); // stylelint-disable-line function-disallowed-list
+        background: linear-gradient(transparent 0%, transparent $border-bottom-thead, var(--#{$variable-prefix}table-border-color) $border-bottom-thead, var(--#{$variable-prefix}table-border-color) 100%);
+        background-color: var(--#{$variable-prefix}table-bg);
+      }
+    }
+  }
+}
 
 // Boosted mod: no table-row-variants
 
