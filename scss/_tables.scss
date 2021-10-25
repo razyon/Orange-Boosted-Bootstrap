@@ -86,11 +86,6 @@
     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-striped-bg);
     color: var(--#{$variable-prefix}table-striped-color);
   }
-
-  > tbody > tr:hover > * {
-    --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-striped-hover-bg);
-    color: var(--#{$variable-prefix}table-striped-hover-color);
-  }
 }
 
 // Active table
@@ -110,6 +105,11 @@
   > tbody > tr:hover > * {
     --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-hover-bg);
     color: var(--#{$variable-prefix}table-hover-color);
+  }
+
+  &.table-striped > tbody > tr:hover > * {
+    --#{$variable-prefix}table-accent-bg: var(--#{$variable-prefix}table-striped-hover-bg);
+    color: var(--#{$variable-prefix}table-striped-hover-color);
   }
 }
 
