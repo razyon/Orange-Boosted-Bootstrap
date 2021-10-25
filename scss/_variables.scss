@@ -810,9 +810,11 @@ $table-bg:                    $body-bg !default;
 
 $table-th-font-weight:        null !default;
 
-$table-striped-color:         $table-color !default;
-$table-striped-bg-factor:     .05 !default;
-$table-striped-bg:            rgba($black, $table-striped-bg-factor) !default;
+$table-striped-color:           $table-color !default;
+$table-striped-bg-factor:       .065 !default;
+$table-striped-bg:              rgba($black, $table-striped-bg-factor) !default;
+$table-striped-hover-bg-factor: .4 !default;
+$table-striped-hover-bg:        rgba($black, $table-striped-hover-bg-factor) !default;
 
 $table-striped-order:         odd !default;
 
