@@ -810,21 +810,25 @@ $table-bg:                    $body-bg !default;
 
 $table-th-font-weight:        null !default;
 
-$table-striped-color:           $table-color !default;
-$table-striped-bg-factor:       .065 !default;
-$table-striped-bg:              rgba($black, $table-striped-bg-factor) !default;
-$table-striped-hover-bg-factor: .4 !default;
-$table-striped-hover-bg:        rgba($black, $table-striped-hover-bg-factor) !default;
+$table-striped-color:                   $table-color !default;
+$table-striped-bg-factor:               .065 !default;
+$table-variant-striped-bg-factor:       .2 !default;
+$table-striped-bg:                      rgba($black, $table-striped-bg-factor) !default;
+$table-striped-hover-bg-factor:         .4 !default;
+$table-variant-striped-hover-bg-factor: .87 !default;
+$table-striped-hover-bg:                rgba($black, $table-striped-hover-bg-factor) !default;
 
-$table-striped-order:         odd !default;
+$table-striped-order:                   odd !default;
 
-$table-active-color:          $table-color !default;
-$table-active-bg-factor:      .1 !default;
-$table-active-bg:             rgba($black, $table-active-bg-factor) !default;
+$table-active-color:                    $table-color !default;
+$table-active-bg-factor:                .13 !default;
+$table-variant-active-bg-factor:        .4 !default;
+$table-active-bg:                       rgba($black, $table-active-bg-factor) !default;
 
-$table-hover-color:           $table-color !default;
-$table-hover-bg-factor:       .065 !default;
-$table-hover-bg:              rgba($black, $table-hover-bg-factor) !default;
+$table-hover-color:                     $table-color !default;
+$table-hover-bg-factor:                 .065 !default;
+$table-variant-hover-bg-factor:         .2 !default;
+$table-hover-bg:                        rgba($black, $table-hover-bg-factor) !default;
 
 $table-border-factor:         .4 !default;
 $table-border-width:          $border-width * .5 !default;

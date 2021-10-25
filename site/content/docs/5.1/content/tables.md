@@ -122,7 +122,7 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
 These classes can also be added to table variants:
 
 <div class="bd-example">
-  <table class="table table-dark table-striped">
+  <table class="table table-dark table-striped table-hover">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -154,7 +154,7 @@ These classes can also be added to table variants:
 </div>
 
 ```html
-<table class="table table-dark table-striped">
+<table class="table table-dark table-striped table-hover">
   <thead>
     ...
   </thead>
