@@ -128,20 +128,17 @@
   overflow: auto;
 }
 
-.table-sticky {
-  > thead {
-    > tr {
-      position: sticky;
-      top: 0;
-      z-index: 2;
-      border-width: 0;
+.table-sticky > thead > tr {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-width: 0;
 
-      > th { // stylelint-disable-line
-        $border-bottom-thead: calc(100% - ($table-border-width * 2)); // stylelint-disable-line function-disallowed-list
-        background: linear-gradient(transparent 0%, transparent $border-bottom-thead, var(--#{$variable-prefix}table-border-color) $border-bottom-thead, var(--#{$variable-prefix}table-border-color) 100%);
-        background-color: var(--#{$variable-prefix}table-bg);
-      }
-    }
+  // Redraw the border-bottom, otherwise it doesn't stick.
+  > th { // stylelint-disable-line
+    $border-bottom-thead: calc(100% - ($table-border-width * 2)); // stylelint-disable-line function-disallowed-list
+    background: linear-gradient(transparent 0%, transparent $border-bottom-thead, var(--#{$variable-prefix}table-border-color) $border-bottom-thead, var(--#{$variable-prefix}table-border-color) 100%);
+    background-color: var(--#{$variable-prefix}table-bg);
   }
 }
 
