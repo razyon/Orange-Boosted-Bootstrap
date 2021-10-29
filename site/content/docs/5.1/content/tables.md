@@ -14,12 +14,28 @@ Using the most basic table markup, here's how `.table`-based tables look in Boos
 
 {{< table class="table" simplified="false" >}}
 
+## Accessibility
+
+For the table's accessibility, there are four main rules.
+
+The first rule is about keyboard users. To make it accessible for every users, add `tabindex="0"` attribute to the `div` tag or to the `table` tag at least.
+
+The second rule is to give a role to the table. To do it, add `role="region"` to the `div` tag.
+
+The third one is about the readability of the table itself. Add `scope="col"` or `scope="row"` attribute to the tags when needed.
+
+To complete the rules, if the `caption` isn't there or isn't enough to describe, add an `aria-label` attribute to describe the table. The `aria-label` should match the following pattern : `aria-label="Table's data description - Table's metadata description (e.g. : table with one level of column header)"`.
+Otherwise, if the caption is enough add an `aria-labelledby="idCaption"` to describe the table.
+
+See [more about the tables structures](https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees).
+
 ## Variants
 
 <!-- Boosted mod: only .table-dark is allowed -->
 Use contextual class to color tables, table rows or individual cells.
 
 <div class="bd-example">
+<div tabindex="0" role="region" aria-label="Table's data description - Table's metadata description e.g : table with one level of row and column header">
   <table class="table">
     <thead>
       <tr>
@@ -41,6 +57,7 @@ Use contextual class to color tables, table rows or individual cells.
     </tr>
     </tbody>
   </table>
+</div>
 </div>
 
 {{< highlight html >}}
@@ -67,6 +84,7 @@ Use contextual class to color tables, table rows or individual cells.
 Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`.
 
 <div class="bd-example">
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -97,8 +115,10 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
     </tbody>
   </table>
 </div>
+</div>
 
 ```html
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table table-striped">
   <thead>
     ...
@@ -117,11 +137,13 @@ Use `.table-striped` to add zebra-striping to any table row within the `<tbody>`
     </tr>
   </tbody>
 </table>
+</div>
 ```
 
 These classes can also be added to table variants:
 
 <div class="bd-example">
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table table-dark table-striped table-hover">
     <thead>
       <tr>
@@ -152,8 +174,10 @@ These classes can also be added to table variants:
     </tbody>
   </table>
 </div>
+</div>
 
 ```html
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table table-dark table-striped table-hover">
   <thead>
     ...
@@ -172,9 +196,11 @@ These classes can also be added to table variants:
     </tr>
   </tbody>
 </table>
+</div>
 ```
 
 <div class="bd-example">
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table table-hover table-striped">
     <thead>
       <tr>
@@ -205,8 +231,10 @@ These classes can also be added to table variants:
     </tbody>
   </table>
 </div>
+</div>
 
 ```html
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table table-hover table-striped">
   <thead>
     ...
@@ -225,6 +253,7 @@ These classes can also be added to table variants:
     </tr>
   </tbody>
 </table>
+</div>
 ```
 
 ### Hoverable rows
@@ -240,6 +269,7 @@ Add `.table-hover` to enable a hover state on table rows within a `<tbody>`.
 Highlight a table row or cell by adding a `.table-active` class.
 
 <div class="bd-example">
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table">
     <thead>
       <tr>
@@ -270,8 +300,10 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tbody>
   </table>
 </div>
+</div>
 
 ```html
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table">
   <thead>
     ...
@@ -290,9 +322,11 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
   </tbody>
 </table>
+</div>
 ```
 
 <div class="bd-example">
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table table-dark">
     <thead>
       <tr>
@@ -323,8 +357,10 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tbody>
   </table>
 </div>
+</div>
 
 ```html
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table table-dark">
   <thead>
     ...
@@ -343,6 +379,7 @@ Highlight a table row or cell by adding a `.table-active` class.
     </tr>
   </tbody>
 </table>
+</div>
 ```
 
 ## How do the variants and accented tables work?
@@ -372,7 +409,7 @@ Add `.table-sm` to make any `.table` more compact by cutting all cell `padding` 
 Table cells of `<thead>` are always vertical aligned to the bottom. Table cells in `<tbody>` inherit their alignment from `<table>` and are aligned to the the top by default. Use the [vertical align]({{< docsref "/utilities/vertical-align" >}}) classes to re-align where needed.
 
 <div class="bd-example">
-  <div class="table-responsive">
+  <div class="table-responsive" tabindex="0" role="region" aria-label="Vertical alignment examples - table with one level of column header">
     <table class="table align-middle">
       <thead>
         <tr>
@@ -407,7 +444,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 </div>
 
 ```html
-<div class="table-responsive">
+<div class="table-responsive" tabindex="0" role="region" aria-label="Vertical alignment examples - table with one level of column header">
   <table class="table align-middle">
     <thead>
       <tr>
@@ -437,6 +474,7 @@ Table cells of `<thead>` are always vertical aligned to the bottom. Table cells 
 Border styles, active styles, and table variants are not inherited by nested tables.
 
 <div class="bd-example">
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table table-dark">
   <thead>
     <tr>
@@ -455,7 +493,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
     </tr>
     <tr>
       <td colspan="4">
-        <table class="table mb-0">
+        <table class="table mb-0" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
           <thead>
             <tr>
               <th scope="col">Header</th>
@@ -492,9 +530,11 @@ Border styles, active styles, and table variants are not inherited by nested tab
   </tbody>
 </table>
 </div>
+</div>
 
 ```html
-<table class="table table-sm">
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
+<table class="table table-sm" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <thead>
     ...
   </thead>
@@ -502,7 +542,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
     ...
     <tr>
       <td colspan="4">
-        <table class="table mb-0">
+        <table class="table mb-0" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
           ...
         </table>
       </td>
@@ -510,6 +550,7 @@ Border styles, active styles, and table variants are not inherited by nested tab
     ...
   </tbody>
 </table>
+</div>
 ```
 
 ## How nesting works
@@ -525,8 +566,9 @@ Note that if you add `<tr>`s as direct children of a table, those `<tr>` will be
 A `<caption>` functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it.
 
 {{< example >}}
+<div tabindex="0" role="region" aria-labelledby="idCaption1">
 <table class="table">
-  <caption>List of users</caption>
+  <caption id="idCaption1">List of users</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -556,14 +598,16 @@ A `<caption>` functions like a heading for a table. It helps users with screen r
     </tr>
   </tbody>
 </table>
+</div>
 {{< /example >}}
 
 <!-- Boosted mod: default caption-side is top -->
 You can also put the `<caption>` on the bottom of the table with `.caption-bottom`.
 
 {{< example >}}
+<div tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
 <table class="table caption-bottom">
-  <caption>List of users</caption>
+  <caption aria-hidden="true">List of users</caption>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -593,6 +637,7 @@ You can also put the `<caption>` on the bottom of the table with `.caption-botto
     </tr>
   </tbody>
 </table>
+</div>
 {{< /example >}}
 
 ## Responsive tables
@@ -610,7 +655,7 @@ Responsive tables make use of `overflow-y: hidden`, which clips off any content 
 Across every breakpoint, use `.table-responsive` for horizontally scrolling tables.
 
 {{< example >}}
-  <div class="table-responsive" tabindex="0">
+  <div class="table-responsive" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
     <table class="table">
       <thead>
         <tr>
@@ -669,7 +714,7 @@ Across every breakpoint, use `.table-responsive` for horizontally scrolling tabl
 {{< /example >}}
 
 ```html
-<div class="table-responsive">
+<div class="table-responsive" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
   <table class="table">
     ...
   </table>
@@ -686,7 +731,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{ range $.Site.Data.breakpoints }}
 {{ if not (eq . "xs") }}
 <div class="bd-example">
-  <div class="table-responsive{{ .abbr }}">
+  <div class="table-responsive{{ .abbr }}" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
     <table class="table">
       <thead>
         <tr>
@@ -747,7 +792,7 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 {{< tables.inline >}}
 {{- range $.Site.Data.breakpoints -}}
 {{- if not (eq . "xs") }}
-<div class="table-responsive{{ .abbr }}">
+<div class="table-responsive{{ .abbr }}" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of row and column header">
   <table class="table">
     ...
   </table>
@@ -764,237 +809,240 @@ Use `.table-responsive{-sm|-md|-lg|-xl|-xxl}` as needed to create responsive tab
 Use `.table-height-{sm|md|lg}` on the container of the table to limit the height of the table. Up to the limited height, the table will overflow its content. Add the attribute `tabindex="0"` for the accessibility on all browsers.
 
 <div class="bd-example">
-  <div class="table-height-sm" tabindex="0">
+  <div class="table-height-sm" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 <div class="bd-example">
-  <div class="table-height-md" tabindex="0">
+  <div class="table-height-md" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 <div class="bd-example">
-  <div class="table-height-lg" tabindex="0">
+  <div class="table-height-lg" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
       </tbody>
     </table>
@@ -1002,7 +1050,7 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
 </div>
 
 ```html
-<div class="table-height-sm" tabindex="0">
+<div class="table-height-sm" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
   <table class="table">
     <thead>
       ...
@@ -1012,7 +1060,7 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
     </tbody>
   </table>
 </div>
-<div class="table-height-md" tabindex="0">
+<div class="table-height-md" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
   <table class="table">
     <thead>
       ...
@@ -1022,7 +1070,7 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
     </tbody>
   </table>
 </div>
-<div class="table-height-lg" tabindex="0">
+<div class="table-height-lg" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
   <table class="table">
     <thead>
       ...
@@ -1039,57 +1087,46 @@ Use `.table-height-{sm|md|lg}` on the container of the table to limit the height
 Add `.table-sticky` to the table element in order to have the first row sticking to the top of the table. The sticky effect has no effect on a non-scrollable table.
 
 <div class="bd-example">
-  <div class="table-height-sm" tabindex="0">
+  <div class="table-height-sm" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
     <table class="table table-sticky">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
       </tbody>
     </table>
@@ -1097,14 +1134,14 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 </div>
 
 ```html
-<div class="table-height-sm" tabindex="0">
+<div class="table-height-sm" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
   <table class="table table-sticky">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Header</th>
+        <th scope="col">Header</th>
+        <th scope="col">Header</th>
+        <th scope="col">Header</th>
       </tr>
     </thead>
     <tbody>
@@ -1117,57 +1154,46 @@ Add `.table-sticky` to the table element in order to have the first row sticking
 Works also with variants :
 
 <div class="bd-example">
-  <div class="table-height-sm" tabindex="0">
+  <div class="table-height-sm" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
     <table class="table table-sticky table-dark">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
+          <th scope="col">Header</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
         <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
         </tr>
       </tbody>
     </table>
@@ -1175,14 +1201,14 @@ Works also with variants :
 </div>
 
 ```html
-<div class="table-height-sm" tabindex="0">
+<div class="table-height-sm" tabindex="0" role="region" aria-label="Bootstrap's developers - table with one level of column header">
   <table class="table table-dark table-sticky">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">Header</th>
+        <th scope="col">Header</th>
+        <th scope="col">Header</th>
+        <th scope="col">Header</th>
       </tr>
     </thead>
     <tbody>
