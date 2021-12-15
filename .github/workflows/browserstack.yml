@@ -5,13 +5,15 @@ on:
       - 'js/**'
     branches:
       - main
-      - "!dependabot/**"
+    branches-ignore:
+      - "dependabot/**"
   pull_request:
     paths:
       - 'js/**'
     branches:
       - main
-      - "!dependabot/**"
+    branches-ignore:
+      - "dependabot/**"
   workflow_dispatch:
 
 env:

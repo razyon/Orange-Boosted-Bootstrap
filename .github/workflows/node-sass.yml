@@ -6,7 +6,8 @@ on:
       - 'scss/**'
     branches:
       - main
-      - "!dependabot/**"
+    branches-ignore:
+      - 'dependabot/**'
   pull_request:
     types:
       - opened
@@ -15,7 +16,8 @@ on:
       - unlabeled
     branches:
       - main
-      - "!dependabot/**"
+    branches-ignore:
+      - 'dependabot/**'
   workflow_dispatch:
 
 env:

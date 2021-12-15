@@ -7,7 +7,8 @@ on:
       - 'site/**'
     branches:
       - main
-      - "!dependabot/**"
+    branches-ignore:
+      - 'dependabot/**'
   pull_request:
     types:
       - opened
@@ -16,7 +17,8 @@ on:
       - unlabeled
     branches:
       - main
-      - "!dependabot/**"
+    branches-ignore:
+      - 'dependabot/**'
   workflow_dispatch:
 
 env:
@@ -62,7 +64,7 @@ jobs:
       - name: Update sri
         run: npm run release-sri
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
-       
+
       - name: Test docs
         run: npm run docs-build
         if: github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:pa11y'))
