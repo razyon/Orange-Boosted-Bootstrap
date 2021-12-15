@@ -14,8 +14,8 @@ on:
       - synchronize
       - labeled
       - unlabeled
-    # branches-ignore:
-    #   - main
+    branches-ignore:
+      - main
   workflow_dispatch:
 
 env:
@@ -29,7 +29,7 @@ jobs:
     steps:
       - name: Bail early
         if: github.event_name == 'pull_request' && ((contains(github.event.pull_request.labels.*.name, 'skip:ci') || contains(github.event.pull_request.labels.*.name, 'skip:percy')) || (github.event.pull_request.draft == true))
-        run: exit 1
+        run: exit 0
 
       - name: Clone repository
         uses: actions/checkout@v2

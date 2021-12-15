@@ -4,16 +4,16 @@ on:
     paths:
       - 'js/**'
       - 'scss/**'
-    branches-ignore:
-      - 'dependabot/**'
+    branches:
+      - main
   pull_request:
     types:
       - opened
       - synchronize
       - labeled
       - unlabeled
-    branches-ignore:
-      - 'dependabot/**'
+    branches:
+      - main
   workflow_dispatch:
 
 env:

@@ -3,13 +3,13 @@ on:
   push:
     paths:
       - 'js/**'
-    branches-ignore:
-      - "dependabot/**"
+    branches:
+      - main
   pull_request:
     paths:
       - 'js/**'
     branches-ignore:
-      - "dependabot/**"
+      - main
   workflow_dispatch:
 
 env:
