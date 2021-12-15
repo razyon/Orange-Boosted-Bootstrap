@@ -6,9 +6,8 @@ on:
       - 'scss/**'
       - 'site/content/docs/**/components'
       - 'site/content/docs/**/forms'
-    branches-ignore:
-      - 'dependabot/**'
-      - 'main-lmp-github-workflows'
+    branches:
+      - main
   pull_request:
     types:
       - opened
@@ -16,8 +15,7 @@ on:
       - labeled
       - unlabeled
     branches-ignore:
-      - 'dependabot/**'
-      - 'main-lmp-github-workflows'
+      - main
   workflow_dispatch:
 
 env:
