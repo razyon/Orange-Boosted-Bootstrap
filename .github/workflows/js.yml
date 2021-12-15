@@ -3,8 +3,6 @@ on:
   push:
     paths:
       - 'js/**'
-    branches:
-      - main
     branches-ignore:
       - 'dependabot/**'
   pull_request:
@@ -13,8 +11,6 @@ on:
       - synchronize
       - labeled
       - unlabeled
-    branches:
-      - main
     branches-ignore:
       - 'dependabot/**'
   workflow_dispatch:

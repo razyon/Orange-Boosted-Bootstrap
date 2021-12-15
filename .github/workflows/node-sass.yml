@@ -4,8 +4,6 @@ on:
   push:
     paths:
       - 'scss/**'
-    branches:
-      - main
     branches-ignore:
       - 'dependabot/**'
   pull_request:
@@ -14,8 +12,6 @@ on:
       - synchronize
       - labeled
       - unlabeled
-    branches:
-      - main
     branches-ignore:
       - 'dependabot/**'
   workflow_dispatch:
