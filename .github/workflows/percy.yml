@@ -14,7 +14,7 @@ on:
       - synchronize
       - labeled
       - unlabeled
-    branches-ignore:
+    branches:
       - main
   workflow_dispatch:
 
@@ -26,17 +26,15 @@ jobs:
   percy:
     runs-on: ubuntu-latest
 
-    if: (github.event_name == 'push' || (github.event_name == 'pull_request' && !contains(github.event.pull_request.labels.*.name, 'skip:ci') && !contains(github.event.pull_request.labels.*.name, 'skip:percy'))) && github.actor != 'dependabot[bot]'
+    if: github.actor != 'dependabot[bot]' && github.event_name != 'pull_request'
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
-        if: github.event.pull_request.draft == false
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
           node-version: "${{ env.NODE }}"
-        if: github.event.pull_request.draft == false
 
       - name: Set up npm cache
         uses: actions/cache@v2
@@ -48,15 +46,12 @@ jobs:
 
       - name: Install npm dependencies
         run: npm ci
-        if: github.event.pull_request.draft == false
 
       - name: Compile dist
         run: npm run dist
-        if: github.event.pull_request.draft == false
 
       - name: Build docs
         run: npm run docs-build
-        if: github.event.pull_request.draft == false
 
       - name: Percy Test
         uses: percy/snapshot-action@v0.1.2
@@ -66,4 +61,11 @@ jobs:
           verbose: true
         env:
           PERCY_TOKEN: "${{ secrets.PERCY_TOKEN }}"
-        if: github.event.pull_request.draft == false
+
+  default:
+    runs-on: ubuntu-latest
+
+    if: "!(github.actor != 'dependabot[bot]' && github.event_name != 'pull_request')"
+    steps:
+      - name: Bail early
+        run: exit 0

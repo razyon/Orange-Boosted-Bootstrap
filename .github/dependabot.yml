@@ -13,7 +13,6 @@ updates:
     labels:
       - dependencies
       - v5
-      - 'skip-ci'
     versioning-strategy: increase
     rebase-strategy: disabled
   - package-ecosystem: "github-actions"
