@@ -8,6 +8,10 @@ on:
     branches:
       - main
   pull_request:
+    paths:
+      - 'js/**'
+      - 'scss/**'
+      - 'site/**'
     types:
       - opened
       - synchronize

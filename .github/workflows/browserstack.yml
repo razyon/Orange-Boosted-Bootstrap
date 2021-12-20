@@ -34,6 +34,7 @@ jobs:
         if: "!(github.event_name == 'pull_request' || contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:browserstack') || github.actor == 'dependabot[bot]')"
 
       - run: node --version
+        if: "!(github.event_name == 'pull_request' || contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:browserstack') || github.actor == 'dependabot[bot]')"
       - run: npm --version
         if: "!(github.event_name == 'pull_request' || contains(github.event.*.labels.*.name, 'skip:ci') || contains(github.event.*.labels.*.name, 'skip:browserstack') || github.actor == 'dependabot[bot]')"
 
