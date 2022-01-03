@@ -91,6 +91,27 @@ Alerts come with a smaller variant: `.alert-sm`.
 {{< /example >}}
 <!-- End mod -->
 
+### Dark background
+
+{{< example class="bg-dark" >}}
+<div class="alert alert-success" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Success</span></span>
+  <p>Success notification text goes here.</p>
+</div>
+<div class="alert alert-info" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Info</span></span>
+  <p>Information notification text goes here.</p>
+</div>
+<div class="alert alert-warning" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Warning</span></span>
+  <p>Warning notification text goes here.</p>
+</div>
+<div class="alert alert-danger" role="alert">
+  <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+  <p>Error notification text goes here.</p>
+</div>
+{{< /example >}}
+
 ### Additional content
 
 Alerts can also contain additional HTML elements like headings, links and paragraphs.
