@@ -133,4 +133,22 @@
     right: -$alert-btn-close-offset-sm;
   }
 }
+
+//// White links against a dark background
+.bg-dark {
+  a,
+  .btn-close {
+    color: $link-dark-color;
+
+    &:hover,
+    &:focus {
+      color: $link-dark-hover-color;
+    }
+
+    &:disabled {
+      color: $link-dark-disabled-color;
+    }
+  }
+}
+
 // End mod

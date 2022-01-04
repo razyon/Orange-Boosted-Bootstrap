@@ -163,6 +163,8 @@ As part of Boosted's evolving CSS variables approach, alerts now use local CSS v
 
 {{< scss-docs name="alert-variables" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="links-theme-variables" file="scss/_variables.scss" >}}
+
 ### Sass mixin
 
 Used in combination with `$theme-colors` to create contextual modifier classes for our alerts.

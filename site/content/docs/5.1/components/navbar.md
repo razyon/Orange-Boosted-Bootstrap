@@ -484,6 +484,8 @@ When you do this, we recommend including additional JavaScript to move the focus
 
 {{< scss-docs name="navbar-variables" file="scss/_variables.scss" >}}
 
+{{< scss-docs name="links-theme-variables" file="scss/_variables.scss" >}}
+
 {{< scss-docs name="navbar-theme-variables" file="scss/_variables.scss" >}}
 
 ### Loop

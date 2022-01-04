@@ -384,26 +384,26 @@
 
   .navbar-nav {
     .nav-link {
-      color: $navbar-dark-color;
+      color: $link-dark-color;
 
       &:hover,
       &:focus {
-        color: $navbar-dark-hover-color;
+        color: $link-dark-hover-color;
       }
 
       &.disabled {
-        color: $navbar-dark-disabled-color;
+        color: $link-dark-disabled-color;
       }
     }
 
     .show > .nav-link,
     .nav-link.active {
-      color: $navbar-dark-active-color;
+      color: $link-dark-active-color;
     }
   }
 
   .navbar-toggler {
-    color: $navbar-dark-color;
+    color: $link-dark-color;
     border-color: $navbar-dark-toggler-border-color;
   }
 
@@ -412,12 +412,12 @@
   }
 
   .navbar-text {
-    color: $navbar-dark-color;
+    color: $link-dark-color;
 
     a,
     a:hover,
     a:focus {
-      color: $navbar-dark-active-color;
+      color: $link-dark-active-color;
     }
   }
 }
