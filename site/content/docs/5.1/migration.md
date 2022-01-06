@@ -328,7 +328,7 @@ Your custom Boosted CSS builds should now look something like this with a separa
 
 ### Orange footer
 
-- <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with subcomponents. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/orange-footer" >}}).
+- <span class="badge bg-danger">Breaking</span> Footers' HTML structure changed a lot as it works now with sub-components. They don't require `.o-footer-*` classes anymore, they need [`.footer-*` classes]({{< docsref "/components/orange-footer" >}}).
 
 ### Orange navbar
 
